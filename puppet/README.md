@@ -7,6 +7,16 @@ Requirements
 ---
 The script assumes :
 
+- that you have Ruby installed  with the following gem 
+
+    - 'net/http'
+    - 'net/https'
+    - 'net/ping'
+    - 'uri'
+    - 'filecache'
+    - 'colorize'
+    - 'mongo'
+
 - that your server naming convention is as follow : 
 
     `environment-role-uniq-identifier-string`
@@ -24,6 +34,14 @@ Features
 ---
 The script provides a 8 hour cache after the first  run, putting in evidence the mongo primary server fqdn and cronMaster webserver.
 
+Usage
+---
+The script accept 2 parameters: 
+
+- first : environment
+- second : role   (optional)
+
+The  output will colorize the cronMaster and primary mongo server for every replicaSet
 
 How to contribute
 ---
