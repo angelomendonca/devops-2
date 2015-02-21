@@ -9,7 +9,8 @@ The script assumes :
 
 - that your server naming convention is as follow : 
 
-    <environment>-<role>-<uniq-identifier-string>
+    `environment-role-uniq-identifier-string`
+
 - that you have this facts declared on your puppet : 
 
    - role

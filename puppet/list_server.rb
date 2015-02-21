@@ -40,7 +40,7 @@ end
 
 def is_cronMaster?(host)
   if host.include?('ws-') and ARGV[0].match(/^(prod|pro|pr|production|p)/)
-     cronMaster_response = http_get(URI.parse("https://10.0.0.37:8140/production/facts_search/search?facts.is_cronMaster=true&facts.fqdn=#{host}"))
+     cronMaster_response = http_get(URI.parse("https://<PUPPET_MASTER_IPADDRESS>:8140/production/facts_search/search?facts.is_cronMaster=true&facts.fqdn=#{host}"))
      if cronMaster_response.body.include?(host)
       return true
      else
